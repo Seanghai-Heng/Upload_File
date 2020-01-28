@@ -10,14 +10,13 @@ if (isset($_SESSION['username'])) {
   // Set the page title and include the header file:
   echo "<title>Welcome</title>";
   //include('templates/header.html'); 
-
   // Print a greeting:
   print '<h2>Welcome to CS262 Web development!</h2>';
   print '<p>Hello, ' . $_SESSION['username'] . '!</p>';
   date_default_timezone_set('Asia/Phnom_Penh');
   print '<p>You have been logged in since: ' . $_SESSION['loggedin'] . '.</p>';
   ?>
-  <form id="submissionForm" enctype="multipart/form-data" method="post">
+  <form action="welcome.php" id="submissionForm" enctype="multipart/form-data" method="post">
     <input type="file" class="file" name="files" accept="application/pdf"><br>
     <button type="submit">Submit</button>
   </form>
@@ -26,7 +25,7 @@ if (isset($_SESSION['username'])) {
   // Make a logout link:
   print '<p><a href="logout.php">Logout</a></p>';
   session_reset();
-  session_unset();
+  // session_unset();
 } else {
   echo 'You need to log in first <br>
     <a href="login.php">Login </a> ';

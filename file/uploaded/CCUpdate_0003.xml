@@ -1,0 +1,25 @@
+[UPGRADE_FILE]
+Name = 
+Version = 
+Level = High
+Model = 
+
+[MESSAGE]
+Content =  
+Version = 0000
+Repeat = 1
+Model = 
+
+[Hotfix]
+Download = Reminder_Hotfix02.zip
+Filename = Reminder_Hotfix02.exe
+Version = 0012
+Model = 
+
+[HTTP]
+Address = 
+Version = 0000
+Model = 
+
+
+

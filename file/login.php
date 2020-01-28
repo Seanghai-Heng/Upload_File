@@ -9,6 +9,7 @@
 <h1>Login</h1>
 <?php 
 session_start();
+session_unset();
 $file =  'users/users.txt';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
 	$loggedin = FALSE; 
@@ -25,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		date_default_timezone_set("Asia/Bangkok");
 		$_SESSION['username'] = $_POST['username'];
 		$_SESSION['loggedin'] = date("l jS \of F Y h:i:s A");
-		
 		header('Location: welcome.php');
 		ob_end_flush();
 	} else {
